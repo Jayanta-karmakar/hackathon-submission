@@ -1,0 +1,261 @@
+
+import { QuizQuestion, QuizCategory } from "../types";
+
+export const mockQuizCategories: QuizCategory[] = [
+  {
+    id: "science",
+    name: "Science",
+    description: "Test your knowledge on scientific principles and discoveries",
+    iconName: "Flask",
+    questionCount: 10,
+  },
+  {
+    id: "pop-culture",
+    name: "Pop Culture",
+    description: "Questions about movies, TV shows, and celebrities",
+    iconName: "Film",
+    questionCount: 10,
+  },
+  {
+    id: "history",
+    name: "History",
+    description: "Events and people from the past",
+    iconName: "Landmark",
+    questionCount: 10,
+  },
+  {
+    id: "tech",
+    name: "Technology",
+    description: "Questions about computers, gadgets, and the internet",
+    iconName: "Cpu",
+    questionCount: 10,
+  },
+  {
+    id: "geography",
+    name: "Geography",
+    description: "Test your knowledge of places and countries",
+    iconName: "Globe",
+    questionCount: 10,
+  },
+];
+
+export const mockQuestions: Record<string, QuizQuestion[]> = {
+  "science": [
+    {
+      id: "sci-1",
+      question: "What is the chemical symbol for gold?",
+      options: ["Go", "Au", "Ag", "Gl"],
+      correctOption: 1,
+      category: "science",
+      difficulty: "easy",
+    },
+    {
+      id: "sci-2",
+      question: "Which planet has the most moons?",
+      options: ["Jupiter", "Saturn", "Uranus", "Neptune"],
+      correctOption: 1,
+      category: "science",
+      difficulty: "medium",
+    },
+    {
+      id: "sci-3",
+      question: "What is the smallest unit of matter?",
+      options: ["Atom", "Molecule", "Cell", "Quark"],
+      correctOption: 3,
+      category: "science",
+      difficulty: "medium",
+    },
+    {
+      id: "sci-4",
+      question: "Which of these is NOT a type of elementary particle?",
+      options: ["Quark", "Lepton", "Boson", "Neutron"],
+      correctOption: 3,
+      category: "science",
+      difficulty: "hard",
+    },
+    {
+      id: "sci-5",
+      question: "What is the speed of light in a vacuum?",
+      options: ["299,792,458 meters per second", "300,000,000 meters per second", "299,792 kilometers per second", "186,000 miles per second"],
+      correctOption: 0,
+      category: "science",
+      difficulty: "medium",
+    },
+  ],
+  "pop-culture": [
+    {
+      id: "pop-1",
+      question: "Which actor played Iron Man in the Marvel Cinematic Universe?",
+      options: ["Chris Evans", "Chris Hemsworth", "Robert Downey Jr.", "Mark Ruffalo"],
+      correctOption: 2,
+      category: "pop-culture",
+      difficulty: "easy",
+    },
+    {
+      id: "pop-2",
+      question: "Which TV show features a high school chemistry teacher who becomes a drug lord?",
+      options: ["The Wire", "Breaking Bad", "Narcos", "Ozark"],
+      correctOption: 1,
+      category: "pop-culture",
+      difficulty: "easy",
+    },
+    {
+      id: "pop-3",
+      question: "Which of these is NOT one of the original Avengers in the MCU?",
+      options: ["Hawkeye", "Black Widow", "Spider-Man", "Thor"],
+      correctOption: 2,
+      category: "pop-culture",
+      difficulty: "medium",
+    },
+    {
+      id: "pop-4",
+      question: "Who directed the movie 'Inception'?",
+      options: ["Steven Spielberg", "James Cameron", "Christopher Nolan", "Quentin Tarantino"],
+      correctOption: 2,
+      category: "pop-culture",
+      difficulty: "medium",
+    },
+    {
+      id: "pop-5",
+      question: "Which band released the album 'The Dark Side of the Moon'?",
+      options: ["Led Zeppelin", "The Beatles", "Pink Floyd", "The Rolling Stones"],
+      correctOption: 2,
+      category: "pop-culture",
+      difficulty: "medium",
+    },
+  ],
+  "history": [
+    {
+      id: "hist-1",
+      question: "In which year did World War II end?",
+      options: ["1943", "1945", "1947", "1950"],
+      correctOption: 1,
+      category: "history",
+      difficulty: "easy",
+    },
+    {
+      id: "hist-2",
+      question: "Who was the first president of the United States?",
+      options: ["Thomas Jefferson", "John Adams", "George Washington", "Benjamin Franklin"],
+      correctOption: 2,
+      category: "history",
+      difficulty: "easy",
+    },
+    {
+      id: "hist-3",
+      question: "Which empire built the Colosseum in Rome?",
+      options: ["Greek", "Roman", "Ottoman", "Byzantine"],
+      correctOption: 1,
+      category: "history",
+      difficulty: "easy",
+    },
+    {
+      id: "hist-4",
+      question: "Which civilization built Machu Picchu?",
+      options: ["Maya", "Aztec", "Inca", "Olmec"],
+      correctOption: 2,
+      category: "history",
+      difficulty: "medium",
+    },
+    {
+      id: "hist-5",
+      question: "In which year did the Berlin Wall fall?",
+      options: ["1987", "1989", "1991", "1993"],
+      correctOption: 1,
+      category: "history",
+      difficulty: "medium",
+    },
+  ],
+  "tech": [
+    {
+      id: "tech-1",
+      question: "Who co-founded Apple Computer with Steve Jobs?",
+      options: ["Bill Gates", "Steve Wozniak", "Paul Allen", "Mark Zuckerberg"],
+      correctOption: 1,
+      category: "tech",
+      difficulty: "easy",
+    },
+    {
+      id: "tech-2",
+      question: "What does CPU stand for?",
+      options: ["Central Processing Unit", "Computer Personal Unit", "Central Processor Utility", "Central Program Utility"],
+      correctOption: 0,
+      category: "tech",
+      difficulty: "easy",
+    },
+    {
+      id: "tech-3",
+      question: "Which programming language was created by James Gosling at Sun Microsystems?",
+      options: ["Python", "Java", "C++", "JavaScript"],
+      correctOption: 1,
+      category: "tech",
+      difficulty: "medium",
+    },
+    {
+      id: "tech-4",
+      question: "What year was the first iPhone released?",
+      options: ["2005", "2007", "2009", "2010"],
+      correctOption: 1,
+      category: "tech",
+      difficulty: "medium",
+    },
+    {
+      id: "tech-5",
+      question: "What does HTTP stand for?",
+      options: ["HyperText Transfer Protocol", "High Tech Transfer Protocol", "Hybrid Transfer Text Protocol", "HyperText Transmission Protocol"],
+      correctOption: 0,
+      category: "tech",
+      difficulty: "easy",
+    },
+  ],
+  "geography": [
+    {
+      id: "geo-1",
+      question: "Which is the largest ocean on Earth?",
+      options: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+      correctOption: 3,
+      category: "geography",
+      difficulty: "easy",
+    },
+    {
+      id: "geo-2",
+      question: "Which country has the largest population in the world?",
+      options: ["India", "China", "United States", "Indonesia"],
+      correctOption: 1,
+      category: "geography",
+      difficulty: "easy",
+    },
+    {
+      id: "geo-3",
+      question: "Which desert is the largest in the world?",
+      options: ["Gobi Desert", "Sahara Desert", "Arabian Desert", "Antarctic Desert"],
+      correctOption: 3,
+      category: "geography",
+      difficulty: "hard",
+    },
+    {
+      id: "geo-4",
+      question: "Which river is the longest in the world?",
+      options: ["Amazon River", "Nile River", "Mississippi River", "Yangtze River"],
+      correctOption: 1,
+      category: "geography",
+      difficulty: "medium",
+    },
+    {
+      id: "geo-5",
+      question: "Which European capital city is situated on the Danube River?",
+      options: ["Prague", "Vienna", "Berlin", "Warsaw"],
+      correctOption: 1,
+      category: "geography",
+      difficulty: "medium",
+    },
+  ],
+};
+
+export const getQuestionsByCategory = (categoryId: string): QuizQuestion[] => {
+  return mockQuestions[categoryId] || [];
+};
+
+export const getAllQuestions = (): QuizQuestion[] => {
+  return Object.values(mockQuestions).flat();
+};

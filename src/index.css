@@ -1,0 +1,146 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 20% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 20% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 20% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 263 80% 70%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 220 20% 16%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 20% 16%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 263 75% 65%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 90% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 16%;
+    --ring: 263 80% 70%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(155, 135, 245, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(217, 70, 239, 0.1) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  /* Neon text effect */
+  .neon-text {
+    text-shadow: 0 0 5px #9b87f5, 0 0 10px #9b87f5;
+  }
+  
+  .neon-text-pink {
+    text-shadow: 0 0 5px #D946EF, 0 0 10px #D946EF;
+  }
+
+  .neon-text-blue {
+    text-shadow: 0 0 5px #7E69AB, 0 0 10px #7E69AB;
+  }
+
+  /* Neon border effect */
+  .neon-border {
+    box-shadow: 0 0 5px #9b87f5, 0 0 10px #9b87f5;
+  }
+
+  .neon-border-pink {
+    box-shadow: 0 0 5px #D946EF, 0 0 10px #D946EF;
+  }
+
+  .neon-border-blue {
+    box-shadow: 0 0 5px #7E69AB, 0 0 10px #7E69AB;
+  }
+
+  /* Glow effect for neon elements */
+  .neon-glow {
+    filter: drop-shadow(0 0 5px #9b87f5);
+  }
+
+  .neon-glow-pink {
+    filter: drop-shadow(0 0 5px #D946EF);
+  }
+
+  .neon-glow-blue {
+    filter: drop-shadow(0 0 5px #7E69AB);
+  }
+}
+
+/* Shared component styles */
+@layer components {
+  .neon-button {
+    @apply relative px-6 py-3 rounded-md font-bold text-white
+    bg-gradient-to-r from-neon-blue to-neon-purple
+    border border-transparent transition-all duration-300
+    hover:shadow-neon-purple hover:scale-105 active:scale-95
+    disabled:opacity-60 disabled:hover:scale-100 disabled:hover:shadow-none;
+  }
+
+  .neon-card {
+    @apply bg-card border border-neon-purple/30 rounded-xl p-6 
+    shadow-lg backdrop-blur-sm transition-all duration-300 
+    hover:border-neon-purple/50 hover:shadow-neon-purple/20;
+  }
+
+  .neon-input {
+    @apply bg-secondary/40 border border-neon-purple/30 rounded-md px-4 py-3
+    text-white focus:outline-none focus:border-neon-purple/70 
+    focus:shadow-neon-purple/30 transition-all w-full;
+  }
+
+  .quiz-countdown {
+    @apply h-2 bg-neon-pink/40 rounded-full overflow-hidden flex items-center justify-start;
+  }
+
+  .quiz-countdown-progress {
+    @apply h-full bg-gradient-to-r from-neon-pink to-neon-purple;
+  }
+
+  .answer-option {
+    @apply relative w-full bg-secondary/60 border border-neon-blue/30
+    rounded-lg p-4 text-left transition-all duration-200
+    hover:border-neon-blue hover:shadow-neon-blue/30 cursor-pointer;
+  }
+
+  .answer-option-correct {
+    @apply border-green-500/70 bg-green-500/20 shadow-[0_0_10px_rgba(34,197,94,0.3)];
+  }
+
+  .answer-option-incorrect {
+    @apply border-red-500/70 bg-red-500/20 shadow-[0_0_10px_rgba(239,68,68,0.3)];
+  }
+
+  .leaderboard-item {
+    @apply flex items-center justify-between p-3 rounded-lg
+    border-l-4 transition-all duration-300 mb-2 bg-secondary/50;
+  }
+
+  .confetti-container {
+    @apply fixed inset-0 pointer-events-none z-50;
+  }
+}
